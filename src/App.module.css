@@ -1,3 +1,80 @@
+.wrapper {
+    position: relative;
+    max-width: 100%;
+}
+
+.createNewTaskContent {
+    border-radius: 8px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: calc(0px - 5.5rem - 6px );
+}
+
+.createNewTaskForm {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.createNewTaskForm input {
+    width: 100%;
+    background: var(--gray-400);
+    color: var(--gray-100);
+    border: 0;
+    resize: none;
+    padding: 1rem;
+    border-radius: 8px;
+    line-height: 1.4;
+    margin-top: 1rem;
+}
+
+.createNewTaskForm footer {
+    max-height: 0;
+}
+
+.createNewTaskForm button[type=submit] {
+    background: var(--blue);
+    color: var(--gray-100);
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.listTask {
+    margin-top: 3rem; /* Added top margin to separate from .listTaskStrong */
+}
+
+/* .listTask div {
+    display: flex;
+    flex-direction: column;
+} */
+
+.listTaskStrong {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin: 0;
+    padding-top: 3rem;
+    width: 100%;
+}
+
+.listTaskStrong .strongTaskCreate {
+    color: var(--blue);
+}
+
+.listTaskStrong .strongTaskCompleted {
+    color: var(--blue-dark);
+}
+
 @media (max-width: 768px) {
   html {
       font-size: 85.5%;

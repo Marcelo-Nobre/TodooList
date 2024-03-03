@@ -1,21 +1,37 @@
-// import { ChangeEvent, FormEvent, useState } from 'react';
-import { PlusCircle } from "phosphor-react";
+import { Trash } from "phosphor-react";
 import styles from "./task.module.css";
+import { useState } from "react";
 
-export function Task() {
-  // const [tasks, setTasks] = useState(['']);
+// export interface TaskProps {
+//     task: {
+//         id: number;
+//     }
+// }
 
-  // const [newTaskText, setNewTaskText] = useState('');
+// interface TaskProps {
+//     task: TaskType;
+//    }
 
-  return (
-    <div className={styles.taskContent}>
-      <form className={styles.taskForm}>
-        <input name="comment" placeholder="Deixe um comentário" required />
+export function Task( ) {
+    const [taskContainer, setTaskContainer] = useState(['Fazer café']);
+    const [newTaskText, setNewTaskText] = useState('');
 
-        <footer>
-          <button type="submit">Criar <PlusCircle size={20} /></button>
-        </footer>
-      </form>
-    </div>
-  );
+        function handleNewTask(event: React.FormEvent) {
+            event.preventDefault();
+            setTaskContainer([...taskContainer, newTaskText]);
+            setNewTaskText('');
+        }
+    return (
+        <div className={styles.taskContent}>
+            <input onSubmit={handleNewTask} className={styles.inputCheckboxTask} type="checkbox" value="" />
+            <p>
+                {taskContainer.map(task=> {
+
+                })}
+            </p>
+            <button title="Deletar comentário">
+                <Trash size={15} />
+            </button>
+        </div>
+    );
 }

@@ -1,51 +1,21 @@
-
 .taskContent {
-    border-radius: 8px;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-top: calc(0px - 5.5rem - 6px );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gray-400);
+  height: 4.5rem;
+  width: 63%;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 0 20px;
 }
 
 .taskContent + .taskContent {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
-.taskForm {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-}
-
-.taskForm input {
-    width: 100%;
-    background: var(--gray-400);
-    border: 0;
-    resize: none;
-    padding: 1rem;
-    border-radius: 8px;
-    color: var(--gray-100);
-    line-height: 1.4;
-    margin-top: 1rem;
-}
-
-.taskForm footer {
-    max-height: 0;
-}
-
-.taskForm  button[type=submit] {
-    background: var(--blue-dark);
-    padding: 1rem 1.5rem;
-    margin-top: 1rem;
-    border-radius: 8px;
-    border: 0;
-    color: var(--white);
-    font-weight: bold;
-    cursor: pointer;
-    transition: backgrounf-color 0.1s;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+.taskContent > button {
+  background-color: var(--gray-400);
+  color: var(--gray-100);
+  border: none;
 }
