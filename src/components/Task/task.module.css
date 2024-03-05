@@ -1,21 +1,50 @@
 .taskContent {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  background: var(--gray-400);
-  height: 4.5rem;
-  width: 63%;
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
   border-radius: 8px;
   padding: 0 20px;
 }
 
-.taskContent + .taskContent {
-  margin-top: 2rem;
+/* .taskContent + .taskContent {
+  margin-top: rem;
+} */
+
+.listTask {
+    margin-top: 3rem;
 }
 
-.taskContent > button {
-  background-color: var(--gray-400);
-  color: var(--gray-100);
-  border: none;
+/* .listTask div {
+    display: flex;
+    flex-direction: column;
+} */
+
+
+.task{
+    width: 65%;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    background: var(--gray-400);
+    border-radius: 8px;
 }
+
+.task > .inputCheckboxTask {
+    margin: 1rem;
+    background-color: var(--gray-400);
+    color: var(--gray-100);
+    border: none;
+}
+
+.task > button {
+    margin: 1rem;
+    background-color: var(--gray-400);
+    color: var(--gray-100);
+    border: none;
+  }
